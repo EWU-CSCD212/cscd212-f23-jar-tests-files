@@ -57,7 +57,7 @@ jobs:
         run: java -jar junit-platform-console-standalone-1.10.0.jar --reports-dir=build/test-results/test1 -cp tools/${{ env.Junit_Test_Jar_File }} -cp out/classes --scan-class-path=tools/${{ env.Junit_Test_Jar_File }} #--select-class=${{ env.Junit_Class_To_run }}
         
       - name: Debug
-      	run: tree
+        run: tree
 
       # Test deadline
       - name: check deadline
