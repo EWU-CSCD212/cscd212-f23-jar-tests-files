@@ -45,16 +45,16 @@ jobs:
           distribution: 'adopt'
 
       - name: Get Junit Launcher
-        run: wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.9.2/junit-platform-console-standalone-1.9.2.jar
+        run: wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.10.0/junit-platform-console-standalone-1.10.0.jar
       #Used to have the Junit test separate from the project
 #      - name: Getting All The test Jar
 #        run: wget https://github.com/EWU-CSCD212/cscd212-f22-jar-tests-files/raw/master/${{ env.Junit_Test_Jar_Repo_path}}${{ env.Junit_Test_Jar_File }}
 #      - name: Getting deadline tool
 #        run: wget https://github.com/EWU-CSCD212/cscd212-f22-jar-tests-files/raw/master/tools/deadLine.jar
       - name: Build Code for testing
-        run: javac -Xlint:unchecked -cp junit-platform-console-standalone-1.9.2.jar -cp tools/${{ env.Junit_Test_Jar_File }} -d out/classes $(find src -name '*.java')
+        run: javac -Xlint:unchecked -cp junit-platform-console-standalone-1.10.0.jar -cp tools/${{ env.Junit_Test_Jar_File }} -d out/classes $(find src -name '*.java')
       - name: Run junit test (${{ env.Junit_Class_To_run }})
-        run: java -jar junit-platform-console-standalone-1.9.2.jar --reports-dir=build/test-results/test1 -cp tools/${{ env.Junit_Test_Jar_File }} -cp out/classes --select-class=${{ env.Junit_Class_To_run }}
+        run: java -jar junit-platform-console-standalone-1.10.0.jar --reports-dir=build/test-results/test1 -cp tools/${{ env.Junit_Test_Jar_File }} -cp out/classes --select-class=${{ env.Junit_Class_To_run }}
 
       # Test deadline
       - name: check deadline
