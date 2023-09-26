@@ -54,7 +54,7 @@ jobs:
       - name: Build Code for testing
         run: javac -Xlint:unchecked -cp junit-platform-console-standalone-1.10.0.jar -cp tools/${{ env.Junit_Test_Jar_File }} -d out/classes $(find src -name '*.java')
       - name: Run junit test (${{ env.Junit_Class_To_run }})
-        run: java -jar junit-platform-console-standalone-1.10.0.jar --reports-dir=build/test-results/test1 -cp tools/${{ env.Junit_Test_Jar_File }} -cp out/classes --scan-class-path=tools/${{ env.Junit_Test_Jar_File }} #--select-class=${{ env.Junit_Class_To_run }}
+        run: java -jar junit-platform-console-standalone-1.10.0.jar --reports-dir=build/test-results/test1 -cp tools/${{ env.Junit_Test_Jar_File }} -cp out/classes --select-class=${{ env.Junit_Class_To_run }} # --scan-class-path=tools/${{ env.Junit_Test_Jar_File }}
 
       # Test deadline
       - name: check deadline
