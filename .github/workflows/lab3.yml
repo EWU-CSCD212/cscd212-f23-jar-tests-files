@@ -26,7 +26,7 @@ jobs:
       Junit_Class_To_run: cscd212F23Tests.ObserverLabTests
       # the date to auto fail (if today >= deadline then fail)
       # NOTE: need .autotests/jar/deadLine.jar
-      Day_After_Dead_Line: 10-29-2023
+      Day_After_Dead_Line: 10-30-2023
 
 
     steps:
