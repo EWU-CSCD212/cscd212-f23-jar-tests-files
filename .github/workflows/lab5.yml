@@ -23,7 +23,7 @@ jobs:
       # tests jar file path
       Junit_Test_Jar_File: lab5/cscd212-f23-lab5-tests.jar
       # the class that has the tests
-      Junit_Class_To_run: cscd212lab5.CSCD212Lab5Tests
+      Junit_Class_To_run: cscd212tests.CSCD212TALab5Tests
       # the date to auto fail (if today >= deadline then fail)
       # NOTE: need .autotests/jar/deadLine.jar
       Day_After_Dead_Line: 11-07-2023
