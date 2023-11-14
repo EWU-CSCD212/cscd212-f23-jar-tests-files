@@ -1,5 +1,5 @@
 #name: Junit test and Checkstyle
-name: test
+name: CheckstyleOnly
 
 on: [ workflow_call ]
 
@@ -9,7 +9,7 @@ permissions:
   id-token: write
 
 jobs:
-  buildAndTest:
+  checkstyleAndDeadline:
 
     runs-on: ubuntu-latest
     timeout-minutes: 3
